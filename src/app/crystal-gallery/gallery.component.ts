@@ -14,7 +14,7 @@ export class GalleryComponent {
     @ViewChild('contentWrapper') contentWrapper: ElementRef;
 
     get isNgContent(){
-        return this.contentWrapper.nativeElement.children.length > 0;
+        return !!this.contentWrapper?(this.contentWrapper.nativeElement.children.length > 0):false;
     }
 
     get masonryState(){
